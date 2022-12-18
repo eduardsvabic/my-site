@@ -1,6 +1,6 @@
 @extends('layoutcos')
 @section('title', 'Cart')
-@section('content')
+@section('ProductsContent')
  <table id="cart" class="table table-hover table-condensed">
  <thead>
  <tr>
@@ -44,15 +44,12 @@ data-id="{{ $id }}"><i class="fa fa-trash-o"></i></button>
  </tbody>
  <tfoot>
  <tr class="visible-xs">
- <td class="text-center"><strong>Total {{ $total
-}}</strong></td>
+ <td class="text-center"><strong>Total {{ $total }}</strong></td>
  </tr>
  <tr>
- <td><a href="{{ url('/') }}" class="btn btn-warning"><i class="fa
-fa-angle-left"></i> Continuare Cumparaturi</a></td>
+ <td><a href="{{ url('/') }}" class="btn btn-warning"><i class="fafa-angle-left"></i> Continuare Cumparaturi</a></td>
  <td colspan="2" class="hidden-xs"></td>
- <td class="hidden-xs text-center"><strong>Total ${{ $total
-}}</strong></td>
+ <td class="hidden-xs text-center"><strong>Total ${{ $total }}</strong></td>
  </tr>
  </tfoot>
  </table>

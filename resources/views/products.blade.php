@@ -1,6 +1,6 @@
 @extends('layoutcos')
 @section('title', 'Products')
-@section('content')
+@section('ProductsContent')
  <div class="container products">
  <div class="row">
  @foreach($products as $product)
