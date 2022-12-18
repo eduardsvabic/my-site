@@ -16,7 +16,6 @@ use Illuminate\Support\Facades\Route;
 Auth::routes();
 Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 Route::group(['middleware' => 'auth'], function(){
-Route::get('/', 'App\Http\Controllers\TaskController@index');
 Route::resource('tasks', 'App\Http\Controllers\TaskController');
 
 //Product Routes

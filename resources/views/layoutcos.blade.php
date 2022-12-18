@@ -14,7 +14,7 @@
     <body>
     @if(Auth::user()->is_admin)
         <div align="center">
-            <a href="#">Add Product</a>
+            <a href="{{ route('tasks.index') }}">Add Product</a>
         </div>
     @endif
 <div class="container">
