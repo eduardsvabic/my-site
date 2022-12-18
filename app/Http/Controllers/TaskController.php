@@ -4,6 +4,7 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Task;
+use App\Models\Product;
 
 class TaskController extends Controller
 {
@@ -14,7 +15,7 @@ class TaskController extends Controller
      */
     public function index(Request $request)
     {
-        $tasks = Task::orderBy('name','ASC')->paginate(5);
+        $tasks = Product::orderBy('name','ASC')->paginate(5);
         $value=($request->input('page',1)-1)*5;
         return view('list',compact('tasks'))->with('i',$value);
     }
@@ -37,10 +38,10 @@ class TaskController extends Controller
      */
     public function store(Request $request)
     {
-        $this->validate($request, ['name' => 'required','description' => 'required']);
+        $this->validate($request, ['name' => 'required','description' => 'required', 'price' => 'required', 'photo' => 'required']);
          // create new task
-         Task::create($request->all());
-         return redirect()->route('tasks.index')->with('success', 'Your task added successfully!');
+         Product::create($request->all());
+         return redirect()->route('tasks.index')->with('success', 'Your product added successfully!');
     }
 
     /**
@@ -51,7 +52,7 @@ class TaskController extends Controller
      */
     public function show($id)
     {
-        $task = Task::find($id);
+        $task = Product::find($id);
         return view('show',compact('task'));
     }
 
@@ -63,7 +64,7 @@ class TaskController extends Controller
      */
     public function edit($id)
     {
-        $task = Task::find($id);
+        $task = Product::find($id);
         return view('edit', compact('task'));
     }
 
@@ -80,7 +81,7 @@ class TaskController extends Controller
             'name' => 'required',
             'description' => 'required'
             ]);
-            Task::find($id)->update($request->all());
+            Product::find($id)->update($request->all());
             return redirect()->route('tasks.index')->with('success','Task updated successfully');
     }
 
@@ -92,7 +93,7 @@ class TaskController extends Controller
      */
     public function destroy($id)
     {
-        Task::find($id)->delete();
+        Product::find($id)->delete();
         return redirect()->route('tasks.index')->with('success','Task removed successfully');
 
     }
