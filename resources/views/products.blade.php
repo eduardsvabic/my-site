@@ -11,8 +11,7 @@
  <h4>{{ $product->name }}</h4>
  <p>{{ str_limit(strtolower($product->description), 50)}}</p>
  <p><strong>Pret: </strong> {{ $product->price }}$</p>
- <p class="btn-holder"><a href="{{ url('add-to-cart/'.$product->id) }}" class="btn btn-warning btn-block text-center"
-role="button">Pune in cos</a> </p>
+ <p class="btn-holder"><a href="{{ url('add-to-cart/'.$product->id) }}" class="btn btn-warning btn-block text-center"role="button">Pune in cos</a> </p>
  </div>
  </div>
  </div>
