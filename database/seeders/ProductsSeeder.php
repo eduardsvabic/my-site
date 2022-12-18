@@ -55,7 +55,6 @@ class ProductsSeeder extends Seeder
             ]);
             DB::table('products')->insert([
             'name' => 'Huawei Elate',
-           29
             'description' => 'Cricket Wireless - Huawei Elate. New Sealed Huawei
            Elate Smartphone.',
             'photo' => 'https://ssli.ebayimg.com/images/g/aJ0AAOSw7zlaldY2/sl640.jpg',
