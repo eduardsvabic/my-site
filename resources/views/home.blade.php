@@ -11,8 +11,7 @@
  {{ session('status') }}
  </div>
  @endif
- <div> <a href="{{URL::to('tasks') }}"> Afisare toate
-sarcinile</a> </div>
+ <div> <a href="{{URL::to('tasks') }}"> Afisare toate sarcinile</a> </div>
  </div>
  </div>
  </div>
