@@ -1,6 +1,6 @@
 @extends('layouts.app')
 @section('content')
-
+<html>
 <head>
     </head>
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
@@ -63,4 +63,5 @@ checkout">
 </div>
 @yield('scripts')
 </body>
+</html>
 @endsection

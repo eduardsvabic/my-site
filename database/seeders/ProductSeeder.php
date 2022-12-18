@@ -68,5 +68,15 @@ class ProductSeeder extends Seeder
             'photo' => 'https://i.ebayimg.com/images/g/u-kAAOSw9p9aXNyf/sl500.jpg',
             'price' => 129.99
             ]);
+            DB::table('products')->insert([
+                'name' => 'Apple iPhone X',
+                'description' => 'GSM & CDMA FACTORY UNLOCKED! WORKS
+               WORLDWIDE! FACTORY UNLOCKED. iPhone x 64gb. iPhone 8 64gb. iPhone 8
+               64gb. iPhone X with iOS 11.',
+                'photo' =>
+               'https://i.ebayimg.com/00/s/MTYwMFg5OTU=/z/9UAAAOSwFyhaFXZJ/$_35.J
+               PG?set_id=89040003C1',
+                'price' => 69.69
+                ]);
     }
 }
