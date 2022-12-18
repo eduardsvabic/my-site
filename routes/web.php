@@ -1,7 +1,6 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\TaskController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,4 +18,12 @@ Route::get('/home', 'App\Http\Controllers\HomeController@index')->name('home');
 Route::group(['middleware' => 'auth'], function(){
 Route::get('/', 'App\Http\Controllers\TaskController@index');
 Route::resource('tasks', 'App\Http\Controllers\TaskController');
+
+//Product Routes
+Route::get('/', 'App\Http\Controllers\ProductsController@index'); //afisare pagina de start
+Route::get('cart', 'App\Http\Controllers\ProductsController@cart'); //cos
+Route::get('add-to-cart/{id}', 'App\Http\Controllers\ProductsController@addToCart');//adaug in cos
+Route::patch('update-cart', 'App\Http\Controllers\ProductsController@update'); //modific cos
+Route::delete('remove-from-cart', 'App\Http\Controllers\ProductsController@remove');//sterg din cos
+
 });
