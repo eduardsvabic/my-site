@@ -41,7 +41,7 @@
         </tr>
         @endforeach
     @else
-        <tr> <td colspan="4">Nu exista sarcini!</td> </tr>
+        <tr> <td colspan="4">Nu exista produse!</td> </tr>
     @endif
     </table>
     <!-- Introduce nr pagina -->

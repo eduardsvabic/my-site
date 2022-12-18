@@ -82,7 +82,7 @@ class TaskController extends Controller
             'description' => 'required'
             ]);
             Product::find($id)->update($request->all());
-            return redirect()->route('tasks.index')->with('success','Task updated successfully');
+            return redirect()->route('tasks.index')->with('success','Product updated successfully');
     }
 
     /**
@@ -94,7 +94,7 @@ class TaskController extends Controller
     public function destroy($id)
     {
         Product::find($id)->delete();
-        return redirect()->route('tasks.index')->with('success','Task removed successfully');
+        return redirect()->route('tasks.index')->with('success','Product removed successfully');
 
     }
 }

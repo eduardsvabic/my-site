@@ -25,4 +25,5 @@ Route::get('add-to-cart/{id}', 'App\Http\Controllers\ProductsController@addToCar
 Route::patch('update-cart', 'App\Http\Controllers\ProductsController@update'); //modific cos
 Route::delete('remove-from-cart', 'App\Http\Controllers\ProductsController@remove');//sterg din cos
 
+
 });

@@ -49,6 +49,7 @@
         </tr>
     </tfoot>
  </table>
+
 @section('scripts')
     <script type="text/javascript">
     $(".update-cart").click(function (e) {
