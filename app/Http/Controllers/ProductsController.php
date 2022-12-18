@@ -3,7 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
-use App\Model\Product;
+use App\Models\Product;
 
 class ProductsController extends Controller
 {
@@ -13,7 +13,7 @@ class ProductsController extends Controller
         return view('products', compact('products'));
     }
 
-    
+
     public function update(Request $request){
         if($request->id and $request->quantity){
             $cart = session()->get('cart');
