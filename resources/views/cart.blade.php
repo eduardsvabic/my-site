@@ -15,6 +15,7 @@
     <?php $total = 0 ?>
 @if(session('cart'))
     @foreach(session('cart') as $id => $details)
+        <?php dd(session('cart'))?>
          <?php $total += $details['price'] * $details['quantity'] ?>
     <tr>
         <td data-th="Product">
