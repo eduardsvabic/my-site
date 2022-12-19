@@ -17,8 +17,9 @@
     <table class="table table-bordered table-stripped">
         <tr>
             <th width="20">ID</th>
-            <th>Titlu</th>
+            <th>Nume</th>
             <th>Descriere</th>
+            <th>Pret</th>
             <th width="300">Actiune</th>
         </tr>
     @if (count($tasks) > 0)
@@ -28,6 +29,7 @@
             <td>{{ ++$i }}</td>
             <td>{{ $task->name }}</td>
             <td>{{ $task->description }}</td>
+            <td>{{ $task->price }} RON</td>
             <td>
                <!-- <a class="btn btn-success" href="{{ route('tasks.show',$task->id) }}">Vizualizare</a> -->
                 <a class="btn btn-primary" href="{{ route('tasks.edit',$task->id) }}">Modificare</a>

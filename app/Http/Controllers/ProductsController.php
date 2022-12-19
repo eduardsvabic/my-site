@@ -13,7 +13,7 @@ class ProductsController extends Controller
         return view('products', compact('products'));
     }
 
-
+    
     public function update(Request $request){
         if($request->id and $request->quantity){
             $cart = session()->get('cart');
@@ -22,6 +22,7 @@ class ProductsController extends Controller
             session()->flash('success', 'Cos modificat cu succes');
         }
     }
+    
     public function remove(Request $request){
         if($request->id) {
             $cart = session()->get('cart');
